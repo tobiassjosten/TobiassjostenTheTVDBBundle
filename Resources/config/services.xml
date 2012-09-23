@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="fpn_thetvdb.http_client.class">FPN\TheTVDB\HttpClient\Buzz</parameter>
+        <parameter key="fpn_thetvdb.api.class">FPN\TheTVDB\Api</parameter>
+    </parameters>
+
+    <services>
+        <service id="fpn_thetvdb.http_client" class="%fpn_thetvdb.http_client.class%" />
+
+        <service id="fpn_thetvdb.api" class="%fpn_thetvdb.api.class%">
+            <argument type="service" id="fpn_thetvdb.http_client" />
+            <argument>%thetvdb_api_key%</argument>
+            <tag alias="thetvdb" />
+        </service>
+    </services>
+
+</container>
