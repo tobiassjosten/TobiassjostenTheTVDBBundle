@@ -4,7 +4,7 @@ This bundle wraps [the TheTVDB API client](https://github.com/tobiassjosten/php-
 
 TheTVDB.com is an open database with a lot of TV related data and graphics, added by its members. Like a niche Wikipedia with an API! You need to [register for an API key](http://thetvdb.com/?tab=apiregister) before you can use the service.
 
-TobiassjostenTheTVDBBundle was initially developed for use in [Smartburk.se](http://thetvdb.com/?tab=apiregister).
+TobiassjostenTheTVDBBundle was initially developed for use in [Smartburk.se](http://www.smartburk.se/).
 
 [![Build Status](https://secure.travis-ci.org/tobiassjosten/TobiassjostenTheTVDBBundle.png?branch=master)](http://travis-ci.org/tobiassjosten/TobiassjostenTheTVDBBundle)
 
