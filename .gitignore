@@ -1,3 +1,5 @@
 phpunit.xml
 composer.lock
 /vendor
+/Tests/cache
+/Tests/logs
