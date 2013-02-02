@@ -42,7 +42,9 @@ class TheTVDBSearchCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $shows = $this->getTheTVDB()
+        $shows = $this
+            ->getContainer()
+            ->get('thetvdb')
             ->searchTvShow($input->getArgument('name'));
 
         if (!count($shows)) {
@@ -54,15 +56,5 @@ class TheTVDBSearchCommand extends ContainerAwareCommand
             $output->writeln($show->getName().' ('.$show->getId().')');
             $output->writeln('- '.$show->getOverview());
         }
-    }
-
-    /**
-     * Helper method to fetch the Api service.
-     *
-     * @return FPN\TheTVDB\Api
-     */
-    private function getTheTVDB()
-    {
-        return $this->getContainer()->get('thetvdb');
     }
 }
