@@ -20,7 +20,8 @@
     },
     "require-dev": {
         "symfony/class-loader": "2.2.*",
-        "symfony/finder": "2.2.*"
+        "symfony/finder": "2.2.*",
+        "symfony/yaml": "2.2.*"
     },
     "minimum-stability": "dev",
     "autoload" : {

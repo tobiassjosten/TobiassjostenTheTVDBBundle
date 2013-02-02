@@ -23,5 +23,6 @@ class TestKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
+        $loader->load(__DIR__.'/test_kernel_config.yml');
     }
 }

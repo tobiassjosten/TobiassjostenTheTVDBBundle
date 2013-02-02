@@ -1,0 +1,4 @@
+parameters:
+    thetvdb_api_key: asdf1234
+    thetvdb_mirror_url: http://localhost/
+    fpn_thetvdb.http_client.class: FPN\TheTVDB\Test\MockHttpClient
