@@ -16,7 +16,7 @@ Add TobiassjostenTheTVDBBundle in your `composer.json`:
 
     {
         "require": {
-            "tobiassjosten/thetvdb-bundle": "*"
+            "tobiassjosten/thetvdb-bundle": "1.0.*"
         }
     }
 
