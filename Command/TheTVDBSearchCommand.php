@@ -49,12 +49,15 @@ class TheTVDBSearchCommand extends ContainerAwareCommand
 
         if (!count($shows)) {
             $output->writeln('<error>No such show could be found</error>');
-            return;
-        }
-
-        foreach ($shows as $show) {
-            $output->writeln($show->getName().' ('.$show->getId().')');
-            $output->writeln('- '.$show->getOverview());
+        } else {
+            foreach ($shows as $show) {
+                $output->writeln(sprintf(
+                    '%d %d %s',
+                    $show->getId(),
+                    $show->getFirstAired()->format('Y'),
+                    $show->getName()
+                ));
+            }
         }
     }
 }

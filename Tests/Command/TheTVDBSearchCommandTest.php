@@ -21,8 +21,7 @@ class TheTVDBSearchCommandTest extends WebTestCase
         $output = $this->execute(true);
 
         $this->assertEquals(
-            'Smallville (72218)'.PHP_EOL
-            .'- Smallville is an american tv serie.'.PHP_EOL,
+            '72218 2001 Smallville'.PHP_EOL,
             $output
         );
     }
