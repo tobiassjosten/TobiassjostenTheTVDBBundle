@@ -15,7 +15,7 @@
         <service id="fpn_thetvdb.api" class="%fpn_thetvdb.api.class%">
             <argument type="service" id="fpn_thetvdb.http_client" />
             <argument>%thetvdb_api_key%</argument>
-            <tag alias="thetvdb" />
+            <tag name="thetvdb" alias="thetvdb" />
         </service>
     </services>
 
